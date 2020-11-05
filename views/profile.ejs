@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/profile.css" type="text/css"></link>
+</head>
+<body>
+  <div id="navbar">
+    <a id="logo">College Space</a>
+    <div id="navbar-right">
+      <a class="active" href="/profile/<%=data[0].sap_id%>">Profile</a>
+      <a href="/posts/<%=data[0].sap_id%>">Posts</a>
+      <a href="/notices">Notices</a>
+      <a href="#">Notes</a>
+    </div>
+  </div>
+  <div>
+    <div class=card>
+      <div class=left>
+          <img src="/images/posts/<%=data[0].profile_img%>" class=display alt="DP"> <!-- add the display picture of professors or students from backend -->
+          <div style="margin-top:250px; text-align:center;">
+            <p style="font-size:25px;"><%= data[0].first_name %> <%= data[0].last_name %></p> <!-- add the name of the individual-->
+          </div>
+      </div>
+      <div class=details>
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">SAP ID </h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].sap_id %></p> <!-- add the sap of the individual-->
+        </div>
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">DEPARTMENT</h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].name %></p> <!-- add the department of the individual-->
+        </div>
+
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">PHONE NUMBER</h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].contact %></p> <!-- add the phone number of the individual-->
+        </div>
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">E-MAIL</h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].email %></p> <!-- add the email of the individual-->
+        </div>
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">DATE OF BIRTH</h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].date_of_birth %></p>  <!-- add the BOD of the individual-->
+        </div>
+
+        <div style="margin-top:10px;">
+          <h4 style="border-width:0.5px; border-color:grey">ADDRESS</h4>
+          <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].address %></p>
+          <!-- add the address of the individual-->
+        </div>
+      </div>
+  </div>
+</div>
+
+
+  <script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "20px 10px";
+      document.getElementById("logo").style.fontSize = "15px";
+    } else {
+      document.getElementById("navbar").style.padding = "40px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    }
+  }
+  </script>
+
+</body>

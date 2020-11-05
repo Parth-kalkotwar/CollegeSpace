@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <!-- <link rel="stylesheet" href="base.css"> -->
+    <!-- FONTS/ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="main-content">
+        <form action="/auth/login" method="POST">
+            <div class="container" id="test">
+
+                <!-- HEADING -->
+                <div class="heading">
+                    <h1>COLLEGE<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPACE<br></h1>
+                    <!-- <img src="C:\Users\rahil\OneDrive\Desktop\CollegeSpace\tranparent_icon.png" alt="NO IMAGE" width="400" height="400"> -->
+                </div>
+                <div class=" login-heading"><b>Login</b></div><br>
+
+                <!-- USERNAME -->
+
+                <label for="email"><b>Email*</b></label>
+                <br>
+                <input type="email" placeholder="Email" name="email" id="username" required>
+                <br><br>
+
+                <!-- PASSWORD -->
+
+                <label for="password "><b>Password*</b></label>
+                <br>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <br><br><br>
+
+                <!-- LOGIN BUTTON -->
+
+                <input type="submit" value="Login" id="login" name="login">
+                <br><br><br>
+
+
+                <!-- SIGN UP -->
+
+                <p id="signup">Are you a new member? <a href="/auth/register"><b>Sign up.</a></b>
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>

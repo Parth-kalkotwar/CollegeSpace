@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/posts.css"></link>
+</head>
+<body>
+    <% if (msg != "") { %>
+        <h1>You need to Login</h1><br />
+        <a href="http://localhost:3000/auth/login">Login</a>
+        <%} else { %>
+            <div id="navbar">
+                <a id="logo">College Space</a>
+                <div id="navbar-right">
+                  <a href="/profile/<%=id%>">Profile</a>
+                  <a class = "active" href="/posts">Posts</a>
+                  <a href="/notices">Notices</a>
+                  <a href="#">Notes</a>
+                </div>
+              </div>
+              
+              <div style="margin-top:100px;font-size:30px; height:1000px; text-align:center">
+                <div style="float:right; width:35%; background-color:#ffffff; border-left:solid 2px; border-color:black; height:1000px;">
+                  <h5>ADD A POST</h5>
+                  <hr/ style="width: 70%">
+                  <div style="padding:20px">
+                    <form action="/posts/<%=id%>" method="POST" enctype="multipart/form-data">
+                      <label>POST TITLE</label><br>
+                      <input type="text" name = "title" style="width:100%"></input><br>
+                      <br>
+                      <label>POST DESCRIPTION</label><br>
+                      <input type ="text" name="description" style="width:100%"></input><br>
+                      <br>
+                      <label>IMAGE</label><br>
+                      <input type="file" name="img" accept="" class="Choose_File" style="width:100%"></input><br>
+                      <br>
+                      <input type="submit"class="submitBtn" value="POST"></input>
+                    </form>
+                  </diV>
+              
+                </div>
+                <div class="right">
+                  <h5>FOR YOU</h5>
+                  <hr style="width:75%">
+                  <div style="padding:10px">
+                    <% for(var i=0; i < data.length; i++) { %>
+                      <div class=post>
+                        <img src="/images/posts/<%=data[i].img%>" style="float:left; width:170px; height:170px "></img>
+                        <a href="/profile/<%=data[i].sap_id%>"><p style="margin-left:250px;"><%=data[i].first_name%> <%= data[i].last_name%></p></a>
+                        <p style="margin-left:250px;"><%=data[i].category%></p>
+                        <hr style="width:75%">
+                        <p style="margin-left:250px"><%=data[i].description%></p>
+                      </div>
+                      <% } %>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+              <script>
+              window.onscroll = function() {scrollFunction()};
+              
+              function scrollFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                  document.getElementById("navbar").style.padding = "20px 10px";
+                  document.getElementById("logo").style.fontSize = "15px";
+                } else {
+                  document.getElementById("navbar").style.padding = "40px 10px";
+                  document.getElementById("logo").style.fontSize = "25px";
+                }
+              }
+              
+              var modal = document.getElementById("myModal");
+              
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+              var img = document.getElementById("myImg");
+              var modalImg = document.getElementById("img01");
+              var captionText = document.getElementById("caption");
+              img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+              }
+              
+              // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+              
+              // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                modal.style.display = "none";
+              }
+              </script>
+              </body>
+              </html>
+</body>
+</html>

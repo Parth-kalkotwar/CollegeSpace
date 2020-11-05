@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registeration</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/register_student.css">
+    <link rel="stylesheet" href="base.css">
+    <!-- FONTS/ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- FORM STARTS HERE -->
+
+    
+        <div class="container">
+            <form action="/auth/registerStudent" method="POST" enctype="multipart/form-data">
+            <!-- HEADING -->
+
+            <h1>
+                <div class="heading">Register As Student</div>
+            </h1>
+
+            <!-- FIRST NAME -->
+
+            <label for="firstname"><b>First Name</b></label>
+            <br>
+            <input type="text" placeholder="First Name" name="firstname" id="firstname" required>
+            <br><br>
+
+
+            <!-- LAST NAME -->
+
+            <label for="lastname"><b>Last Name</b></label>
+            <br>
+            <input type="text" name="lastname" placeholder="Last Name" id="lastname" required>
+            <br><br>
+
+            <!-- SAP ID -->
+
+            <label for="sapid"><b>SAP ID</b></label>
+            <br>
+            <input type="text" name="sapid" placeholder="SAP ID" id="sapid" required>
+            <br><br>
+
+            <!-- EMAIL -->
+
+            <label for="email"><b>E-Mail ID</b></label>
+            <br>
+            <input type="email" name="email" placeholder="E-Mail ID" id="email" required>
+            <br><br>
+
+            <label for="password"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <br><br>
+
+            <!-- DOB -->
+
+            <label for="dob"><b>Date of Birth</b></label>
+            <br>
+            <input type="date" name="dob" id="dob" required>
+            <br><br>
+
+            <!-- GENDER -->
+
+            <!--
+            <label for="gender"><b>Gender</b></label>
+            <br>
+            <select name="gender" id="gender" required>
+                <option value="" hidden disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br><br>
+
+            -->
+
+            <!-- USERNAME -->
+
+            <!-- <label for="username"><b>Username</b></label>
+            <br>
+            <input type="text" placeholder="Username" name="username" id="username" required>
+            <br><br> -->
+
+            <!-- PASSWORD -->
+
+            <!-- <label for="password"><b>Password</b>></label>
+            <br>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <br><br> -->
+
+            <!-- STREAM SELECTION -->
+
+            <label for="stream"><b>Stream</b></label>
+            <br>
+            <select id="stream" name="stream" required>
+                <option selected disabled hidden>Select Stream</option>
+                <option value="Computer">Computer</option>
+                <option value="IT">IT</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="EXTC">EXTC</option>
+                <option value="ELEX">ELEX</option>
+                <option value="Chemical">Chemical</option>
+                <option value="Production">Production</option>
+                <option value="BioMed">BioMed</option>
+
+            </select>
+            <br><br><br>
+
+            <!-- YEAR SELECTION -->
+
+            <label for="year"><b>Year</b></label>
+            <br>
+            <select name="year" id="year" required>
+                <option selected disabled hidden>Select Year</option>
+                <option value="FE">FE</option>
+                <option value="SE">SE</option>
+                <option value="TE">TE</option>
+                <option value="BE">BE</option>
+            </select>
+            <br><br><br>
+
+            <!-- PHONE NUMBER -->
+            <label for="phone"><b>Phone Number</b></label>
+            <br>
+            <input type="tel" name="phone" placeholder="Phone Number" id="phone" required>
+            <br><br>
+
+            <!-- ADDRESS -->
+
+            <label for="address"><b>Address</b></label>
+            <br>
+            <input type="text" name="address" placeholder="Address" id="address" required>
+            <br><br> 
+
+            <!-- PROFILE PHOTO/AVATAR -->
+
+            <label for="avatar"><b>Upload Profile Photo</b></label>
+            <br>
+            <!--<input type="file" name="img" accept="" class="Choose_File" style="width:100%"></input><br> -->
+            <input type="file" name="avatar" id="avatar" accept=""></input>
+            <br><br>
+
+            <!-- SUBMIT BUTTON -->
+
+            <input type="submit" name="submit" id="submit">
+            <br><br>
+        </form>
+            <!-- SIGN IN -->
+
+            <!-- <div class="container signin"> -->
+            <p id="signin">Already have an account?
+                <a href="/auth/login"><b>Sign in.</b></a>
+            </p>
+            <!-- </div> -->
+
+        </div>
+</body>
+</html>
