@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/notes_main.css">
+</head>
+<body>
+  <div id="navbar">
+    <a id="logo">College Space</a>
+    <div id="navbar-right">
+      <a href="#home">Posts</a>
+      <a href="#contact">Notices</a>
+      <a class="active" href="#about">Notes</a>
+    </div>
+  </div>
+  <div class="box">
+    <table style="width:100%">
+      <tr>
+        <th>
+          <div class="card">
+            <a href="/notes_year/<%=id%>/1"><img src="/images/one.jpg" alt="Avatar" style="width:100%; height:75%"></a>
+            <div class="container">
+              <h2><b>First Year</b></h2>
+            </div>
+          </div>
+        </th>
+        <th>
+          <div class="card">
+            <a href="/notes_year/<%=id%>/2"><img src="/images/two.jpg" alt="Avatar" style="width:100%; height:75%"></a>
+            <div class="container">
+              <h2><b>Second Year</b></h2>
+            </div>
+          </div>
+        </th>
+        <th>
+          <div class="card">
+            <a href="/notes_year/<%=id%>/3"><img src="/images/three.jpg" alt="Avatar" style="width:100%"></a>
+            <div class="container">
+              <h2><b>Third Year</b></h2>
+            </div>
+          </div>
+        </th>
+        <th>
+          <div class="card">
+            <a href="/notes_year/<%=id%>/4"><img src="/images/four.jpg" alt="Avatar" style="width:100%"></a>
+            <div class="container">
+              <h2><b>Fourth Year</b></h2>
+            </div>
+          </div>
+        </th>
+    </table>
+  </div>
+
+
+  <script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "20px 10px";
+      document.getElementById("logo").style.fontSize = "15px";
+    } else {
+      document.getElementById("navbar").style.padding = "40px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    }
+  }
+  </script>
+</body>
+</html>

@@ -15,6 +15,9 @@ var profileRouter = require('./routes/profile');
 var authRouter = require('./routes/auth/index')
 var postsRouter = require('./routes/posts')
 var noticesRouter = require('./routes/notices');
+var notesRouter = require('./routes/notes');
+var notesMainRouter = require('./routes/notes_main');
+var pdfRouter = require('./routes/pdf');
 const bodyParser = require('body-parser');
 
 
@@ -57,6 +60,9 @@ app.use('/auth',authRouter);
 app.use('/posts',postsRouter);
 app.use('/notices',noticesRouter);
 app.use('/profile',profileRouter);
+app.use('/notes',notesRouter);
+app.use('/notes_year',notesMainRouter);
+app.use('/pdf',pdfRouter);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/notes.css">
+</head>
+<body>
+  <div id="navbar">
+    <a id="logo">College Space</a>
+    <div id="navbar-right">
+      <a href="/notes/<%=id%>">&laquo; Previous</a>
+    </div>
+  </div>
+
+  <div style="margin-top:100px;font-size:30px; height:1000px; text-align:center">
+    <div style="float:right; width:35%;background-color: #292a2b;; border-left:solid 2px; border-color:black; height:1000px; color:#afafaf">
+      <h5>ADD NOTES</h5>
+      <hr/ style="width: 70%">
+      <div style="padding:20px">
+        <form action="/notes_year/<%=id%>/<%=year%>" method="POST" enctype="multipart/form-data">
+          <label>SUBJECT</label><br>
+          <input type="text" style="width:100%" name="subject"></input><br>
+          <br>
+          <label>MODULE NUMBERS/ DESCRIPTION</label><br>
+          <input type="text" style="width:100%" name="title"></input><br>
+          <br>
+          <label>ADD FILE</label><br>
+          <input type="file" name="pdf" accept="" class="Choose_File" style="width:100%"></input><br>
+          <br>
+          <input type="submit"class="submitBtn"  value="POST"></input>
+        </form>
+      </diV>
+
+    </div>
+    <div class="left">
+      <h5>FOR YOU</h5>
+      <hr style="width:75%">
+      <div style="padding:10px">
+        <% for(var i=0; i < data.length; i++) { %>
+        <div class=post>
+          <!-- In place of image we will have to put the file from the backend and in href we have to add the link of the file-->
+          <a href="https://image.shutterstock.com/image-photo/mumbai-city-night-260nw-1074080225.jpg" download>
+            <img src="/images/icon.jpg" style="float:left; width:180px; height:180px"></img>
+          </a>
+          <p style="margin-left:250px;"><%=data[i].subject%></p>
+          <hr style="width:75%">
+          <p style="margin-left:250px"><%=data[i].title%></p>
+          <a style="margin-left:250px" href="/pdf/<%=data[i].path%>">VIEW</a>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "20px 10px";
+      document.getElementById("logo").style.fontSize = "15px";
+    } else {
+      document.getElementById("navbar").style.padding = "40px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    }
+  }
+
+  function goBack() {
+  window.history.back();
+ }
+  </script>
+</body>
+</html>
