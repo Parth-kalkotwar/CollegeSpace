@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.content {
+  background-color: white;
+  height: 1000px;
+  z-index: 1;
+}
+
+.content .row {
+  background-color: blue;
+  /* padding-top: 500px; */
+}
+
+.navbar {
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* background-color: white; */
+  background-color: transparent;
+  padding-top: 0px;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+  -webkit-transition: all ease-out 0.3s;
+}
+
+.navbar a {
+  float: left;
+  /* color: #232323; */
+  color: white;
+  text-align: center;
+  padding: 24px 12px 12px 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.navbar a.logo {
+  font-size: 45px;
+  font-weight: bold;
+  color: darkgrey;
+  font-family: "Bebas Neue", cursive;
+}
+
+.navbar a.logo:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-right {
+  float: right;
+  color: #b1b1b1;
+  padding-right: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    position: static;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar-right {
+    float: none;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  margin: 0;
+  padding-top: 0px;
+  position: static;
+  height: 50vh;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  color: #c1c1c1;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer p {
+  margin: 0;
+  color: #c1c1c1;
+}
+
+.footer .row {
+  padding: 40px;
+}
+
+.footer .col {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+
+/* .contents {
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 22vw;
+} */
+
+.location {
+  padding-left: 100px;
+  margin: 0 auto;
+  width: 55%;
+  background-image: url(location.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 8vw;
+  background-position-y: 0vh;
+}
+
+.phone-number {
+  padding-left: 102px;
+  margin: 0 auto;
+  width: 55%;
+  background-image: url(telephone.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 8vw;
+  background-position-y: 0vh;
+}
+
+.email-address {
+  padding-left: 102px;
+  margin: 0 auto;
+  width: 55%;
+  background-image: url(email.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 8vw;
+  background-position-y: 0vh;
+}
+
+.about-us {
+  text-align: justify;
+  margin-left: 11vw;
+  margin-right: 11vw;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #242424;
+}
+
+/* ADD .container BEFORE ::-webkit TO LIMIT SCROLLBAR PROPERTIES TO CONTAINER */
+
+::-webkit-scrollbar-thumb {
+  background-color: #afafaf;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+input:hover::-webkit-input-placeholder {
+  color: white;
+}

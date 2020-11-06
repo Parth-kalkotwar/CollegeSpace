@@ -6,11 +6,13 @@
 </head>
 <body>
   <div id="navbar">
-    <a id="logo">College Space</a>
+    <a id="logo" href="/">College Space</a>
     <div id="navbar-right">
-      <a href="#home">Posts</a>
-      <a href="#contact">Notices</a>
-      <a class="active" href="#about">Notes</a>
+      <a href="/profile/<%=id%>">Profile</a>
+      <a href="/posts/<%=id%>">Posts</a>
+      <a href="/notices/<%=id%>">Notices</a>
+      <a class="active" href="/notes/<%=id%>">Notes</a>
+      <a href="/auth/logout">Logout</a>
     </div>
   </div>
   <div class="box">

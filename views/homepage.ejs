@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- CSS/JS FILES-->
+    <link rel="stylesheet" href="/stylesheets/homepage.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+
+    <!-- FONTS/ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR STARTS HERE -->
+    <div class="navbar">
+        <a href="/" class="logo">CollegeSpace</a>
+        <div class="navbar-right">
+            <a href="#contact-us">Contact Us</a>
+            <a href="#about-us">About Us</a>
+            <% if(!auth) { %>
+            <a href="/auth/login">Login</a>
+            <a href="/auth/registerStudent">Register As Student</a>
+            <a href="/auth/registerFaculty">Register As Faculty</a>
+            <% } else { %>
+            <a href="/auth/logout">Logout</a>
+            <% } %>
+
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="welcome" id="welcome">
+                <p>
+                    <h1>
+                        <span class="text_1">Welcome To CollegeSpace!</span>
+                        <span class="text_2">Time To Get Social</span>
+                    </h1>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div class="slogan">
+            <p>All Your Needs At One Place</p>
+        </div>
+        <hr class="division">
+        <div class="card">
+            <div class="notes">
+                <div class="interior">
+                    <h2>Notes</h2>
+                    <p>Tired of scrolling through endless chats to find the pdfs. No worries we got them for you all your notes at one place, you are always a click away from them. So now you can focus on studying the notes rather than finding them</p>
+                    <br>
+                    <input type="button" value="Go to Notes" name="notes-submit" id="notes-submit">
+                </div>
+            </div>
+            <br><br>
+            <hr class="division">
+            <br><br>
+            <div class="posts">
+                <div class="interior">
+                    <h2>Posts</h2>
+                    <p>There was event, make sure you talk about it and let the college know of this proud moment. Share your experiences with your mates today. Share and view posts here and be a part of each others experiences and happiness.</p>
+                    <br>
+                    <input type="button" value="Go to Posts" name="posts-submit" id="posts-submit">
+                </div>
+            </div>
+            <br><br>
+            <hr class="division">
+            <br><br>
+            <div class="notices">
+                <div class="interior">
+                    <h2>Notices</h2>
+                    <p>Why should you wait for the CRs to forward a notice? Be the first one to get the news right from the faculty members. No more rumours and false messages, we give one place with all your notices and allow you to be in touch with your
+                        faculty members.</p>
+                    <br>
+                    <input type="button" value="Go to Notices" name="notices-submit" id="notices-submit">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER STARTS HERE -->
+    <div class="footer">
+        <div class="row">
+            <div class="col">
+                <div id="contact-us">
+                    <h3>Contact Us</h3>
+                    <br><br>
+                    <div class="contents" style="display: flex; flex-direction: column;justify-content: center; align-items: center;">
+                        <div class="location" style="display: flex;">
+                            <img src="/images/location.png" height="20px" width="20px">
+                            <p style="padding-left: 15px;">Mumbai, India</p>
+                        </div>
+                        <br><br>
+                        <div class="phone-number" style="display: flex;">
+                            <img src="/images/telephone.png" height="20px" width="20px">
+                            <p style="padding-left: 15px;">+919820202020</p>
+                        </div>
+                        <br><br>
+                        <div class="email-address" style="display: flex;">
+                            <img src="/images/email.png" height="20px" width="20px">
+                            <p style="padding-left: 15px;">support@jago.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>About Us</h3>
+                <br>
+                <div class="about-us" id="about-us">
+                    <p>CollegeSpace is a one stop destination for all your notes, notices, posts and what not! We at CollegeSpace, aim to make your life easier. This is a platform where everything is just a click away. We help in reducing the wait time and
+                        connecting the students directly to the faculty. It's time to go social!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/navbar.js"></script>
+</body>
+
+</html>

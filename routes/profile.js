@@ -10,7 +10,7 @@ router.get('/:id', function(req, res) {
       }
       else {
         //res.status(200).json(result)
-        res.render('profile',{data:result,msg:""});
+        res.render('profile',{data:result,msg:"",id:req.params.id});
       }
     })
 });

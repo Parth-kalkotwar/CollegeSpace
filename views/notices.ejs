@@ -2,16 +2,18 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="stylesheets/notice.css"></link>
+<link rel="stylesheet" href="/stylesheets/notice.css"></link>
 </head>
 <body>
 
 <div id="navbar">
-  <a id="logo">College Space</a>
+  <a href = "/" id="logo">College Space</a>
   <div id="navbar-right">
-    <a href="#home">Posts</a>
-    <a class="active" href="#contact">Notices</a>
-    <a href="#about">Notes</a>
+    <a href="/profile/<%=id%>">Profile</a>
+    <a href="/posts/<%=id%>">Posts</a>
+    <a class="active" href="/notices/<%=id%>">Notices</a>
+    <a href="/notes/<%=id%>">Notes</a>
+    <a href="/auth/logout">Logout</a>
   </div>
 </div>
 
@@ -20,7 +22,7 @@
     <h5>ADD NOTICE</h5>
     <hr/ style="width: 70%">
     <div style="padding:20px">
-      <form action="">
+      <form action="/notices/<%=id%>" method="POST" enctype="multipart/form-data">
         <label>NOTICE TITLE</label><br>
         <input type="text" style="width:100%"></input><br>
         <br>
@@ -30,24 +32,19 @@
         <input type="submit"class="submitBtn" value="POST"></input>
       </form>
     </diV>
-
   </div>
   <div class="right">
     <h5>FOR YOU</h5>
     <hr style="width:75%">
     <div style="padding:10px">
+      <% for(var i=0; i < data.length; i++) { %>
       <div class=post>
-        <img src="images/icon.jpg" style="float:left; width:180px; height:180px"></img>
-        <p style="margin-left:250px;">POST TITLE</p>
+        <img src="/images/icon.jpg" style="float:left; width:180px; height:180px"></img>
+        <p style="margin-left:250px;"><%=data[i].description%></p>
         <hr style="width:75%">
-        <p style="margin-left:250px">POST DESCRIPTION</p>
+        <p style="margin-left:250px"><%=data[i].issue_date%></p>
       </div>
-      <div class=post>
-        <img src="images/icon.jpg" style="float:left; width:180px; height:180px"></img>
-        <p style="margin-left:250px">POST TITLE</p>
-        <hr style="width:75%">
-        <p style="margin-left:250px">POST DESCRIPTION</p>
-      </div>
+      <% } %>
     </div>
   </div>
 </div>

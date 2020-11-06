@@ -3,7 +3,7 @@ var router = express.Router();
 
 router.get('/logout', function(req, res, ) {
     res.clearCookie('jwt');
-  res.render('login');
+  res.redirect('/');
 });
 
 module.exports = router;

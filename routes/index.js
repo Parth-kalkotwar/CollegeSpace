@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  if(!req.cookies.jwt) {
+    return res.render('homepage', { auth:false });
+  }
+  else {
+    return res.render('homepage',{auth:true})
+  }
 });
 
 module.exports = router;

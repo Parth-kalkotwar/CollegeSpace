@@ -6,12 +6,13 @@
 </head>
 <body>
   <div id="navbar">
-    <a id="logo">College Space</a>
+    <a id="logo" href="/">College Space</a>
     <div id="navbar-right">
       <a class="active" href="/profile/<%=data[0].sap_id%>">Profile</a>
       <a href="/posts/<%=data[0].sap_id%>">Posts</a>
-      <a href="/notices">Notices</a>
-      <a href="#">Notes</a>
+      <a href="/notices/<%=id%>">Notices</a>
+      <a href="/notes/<%=id%>">Notes</a>
+      <a href="/auth/logout">Logout</a>
     </div>
   </div>
   <div>

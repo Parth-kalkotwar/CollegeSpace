@@ -2,21 +2,25 @@ var express = require('express');
 var router = express.Router();
 const { db } = require('../db')
 
-router.get('/', function(req, res) {
+router.get('/:id', function(req, res) {
   db.query(`select * from notices`, (err,result) => {
     if(err) {
       console.log(err);
     }
     else {
       //res.status(200).json(result)
-      res.render('notices',{data:result});
+      for(var i = 0;i<result.length;i++) {
+        var dd = String(result[i].issue_date).split(" ");
+        result[i].issue_date = dd[2] + " " + dd[1] + " " + dd[3]; 
+      }
+      res.render('notices',{data:result,id:req.params.id});
     }
   })
 });
 
-router.post('/',async(req,res) => {
+router.post('/:id',async(req,res) => {
     const {description} = req.body;
-    const id = 1;
+    const {id} = req.params;
     var file = req.files.img;
     var img_name =id + "_" + file.name;
     file.mv('public/images/posts/' + img_name,async(err) => {
@@ -29,7 +33,7 @@ router.post('/',async(req,res) => {
             console.log(err);
           }
           else {
-            res.redirect('/posts');
+            res.redirect('/notices/<%=id%>');
           }
         })
       }
