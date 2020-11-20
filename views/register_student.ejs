@@ -7,7 +7,7 @@
     <title>Student Registeration</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/register_student.css">
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
     <!-- FONTS/ICONS -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -17,10 +17,17 @@
 </head>
 
 <body>
-
+    <div class="navbar">
+        <a href="/" class="logo">CollegeSpace</a>
+        <div class="navbar-right">
+            <a href="#contact-us">Contact Us</a>
+            <a href="#about-us">About Us</a>
+            <a href="/auth/login">Login</a>
+            <a href="/auth/registerStudent">Register As Student</a>
+            <a href="/auth/registerFaculty">Register As Faculty</a>
+        </div>
+    </div>
     <!-- FORM STARTS HERE -->
-
-    
         <div class="container">
             <form action="/auth/registerStudent" method="POST" enctype="multipart/form-data">
             <!-- HEADING -->

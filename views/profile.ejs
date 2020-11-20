@@ -3,6 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/stylesheets/profile.css" type="text/css"></link>
+
+<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="navbar">
@@ -18,7 +25,7 @@
   <div>
     <div class=card>
       <div class=left>
-          <img src="/images/posts/<%=data[0].profile_img%>" class=display alt="DP"> <!-- add the display picture of professors or students from backend -->
+          <img src="/images/profile/<%=data[0].profile_img%>" class=display alt="DP"> <!-- add the display picture of professors or students from backend -->
           <div style="margin-top:250px; text-align:center;">
             <p style="font-size:25px;"><%= data[0].first_name %> <%= data[0].last_name %></p> <!-- add the name of the individual-->
           </div>
@@ -26,7 +33,7 @@
       <div class=details>
 
         <div style="margin-top:10px;">
-          <h4 style="border-width:0.5px; border-color:grey">SAP ID </h4>
+          <h4 style="border-width:0.5px; border-color:grey ;color:#afafaf">SAP ID </h4>
           <p style="font-size:20px; background-color:#242424; padding:10px"><%= data[0].sap_id %></p> <!-- add the sap of the individual-->
         </div>
 
@@ -67,10 +74,10 @@
   function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
       document.getElementById("navbar").style.padding = "20px 10px";
-      document.getElementById("logo").style.fontSize = "15px";
+      document.getElementById("logo").style.fontSize = "25px";
     } else {
       document.getElementById("navbar").style.padding = "40px 10px";
-      document.getElementById("logo").style.fontSize = "25px";
+      document.getElementById("logo").style.fontSize = "50px";
     }
   }
   </script>

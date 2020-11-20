@@ -21,7 +21,7 @@ router.post('/login',(req,res) => {
             if(err) {
                 console.log(err);
             }
-            else if(!results.length || await bcrypt.compare(password,results[0].password)) {
+            else if(results.length == 0 || !await bcrypt.compare(password,results[0].password)) {
                 return res.redirect('/auth/login')
             }
             else {

@@ -92,7 +92,7 @@ input[type="file"] {
   height: 100px;
   background: #242424;
   color: #afafaf;
-  font-family: "Overpass", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-left: 10px;
   padding-top: 4px;
   border-color: #242424;
@@ -125,7 +125,7 @@ input[type="file"] {
   border: none;
   cursor: pointer;
   opacity: 0.9;
-  font-family: "Overpass", sans-serif;
+  font-family: "Montserrat", sans-serif;
   align-items: center;
   font-size: large;
   font-weight: bold;

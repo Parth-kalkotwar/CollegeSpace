@@ -3,11 +3,17 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/stylesheets/notice.css"></link>
+<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="navbar">
-  <a href = "/" id="logo">College Space</a>
+  <a href = "/" id="logo">CollegeSpace</a>
   <div id="navbar-right">
     <a href="/profile/<%=id%>">Profile</a>
     <a href="/posts/<%=id%>">Posts</a>
@@ -18,8 +24,8 @@
 </div>
 
 <div style="margin-top:100px;font-size:30px; height:1000px; text-align:center">
-  <div style="float:right; width:35%; background-color:#ffffff; border-left:solid 2px; border-color:black; height:1000px;">
-    <h5>ADD NOTICE</h5>
+  <div style="float:right; width:35%; background-color:#1c1c1d; border-left:solid 2px; position:fixed; right:0;border-color:white; height:1000px;">
+    <h5 style="color:  #afafaf;">ADD NOTICE</h5>
     <hr/ style="width: 70%">
     <div style="padding:20px">
       <form action="/notices/<%=id%>" method="POST" enctype="multipart/form-data">
@@ -27,22 +33,22 @@
         <input type="text" style="width:100%"></input><br>
         <br>
         <label>ADD FILE</label><br>
-        <input type="file" class="Choose_File" style="width:100%"></input><br>
+        <input id="avatar" type="file" class="Choose_File" style="width:100%"></input><br>
         <br>
-        <input type="submit"class="submitBtn" value="POST"></input>
+        <input   style="width: 50%; height: 7vh;" type="submit"class="submitBtn" value="POST"></input>
       </form>
     </diV>
   </div>
   <div class="right">
-    <h5>FOR YOU</h5>
+    <h5 style="color:#afafaf">FOR YOU</h5>
     <hr style="width:75%">
     <div style="padding:10px">
       <% for(var i=0; i < data.length; i++) { %>
       <div class=post>
-        <img src="/images/icon.jpg" style="float:left; width:180px; height:180px"></img>
-        <p style="margin-left:250px;"><%=data[i].description%></p>
+        <p style="margin-left:250px;margin-left:250px; color: #afafaf; font-weight: bold; font-size: larger; text-decoration: none;"><%=data[i].description%></p>
         <hr style="width:75%">
-        <p style="margin-left:250px"><%=data[i].issue_date%></p>
+        <p style="margin-left:250px ;margin-left:250px; color: #afafaf; font-weight: bold; font-size: larger; text-decoration: none;"><%=data[i].issue_date%></p>
+        <a style="margin-left:250px; text-decoration: none; color: #afafaf;" href="/pdf/tcs">VIEW</a>
       </div>
       <% } %>
     </div>
@@ -55,10 +61,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar").style.padding = "20px 10px";
-    document.getElementById("logo").style.fontSize = "15px";
+    document.getElementById("logo").style.fontSize = "25px";
   } else {
     document.getElementById("navbar").style.padding = "40px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
+    document.getElementById("logo").style.fontSize = "50px";
   }
 }
 </script>

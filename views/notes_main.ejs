@@ -3,10 +3,16 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/stylesheets/notes_main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="navbar">
-    <a id="logo" href="/">College Space</a>
+    <a id="logo" href="/">CollegeSpace</a>
     <div id="navbar-right">
       <a href="/profile/<%=id%>">Profile</a>
       <a href="/posts/<%=id%>">Posts</a>
@@ -60,10 +66,10 @@
   function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
       document.getElementById("navbar").style.padding = "20px 10px";
-      document.getElementById("logo").style.fontSize = "15px";
+      document.getElementById("logo").style.fontSize = "25px";
     } else {
       document.getElementById("navbar").style.padding = "40px 10px";
-      document.getElementById("logo").style.fontSize = "25px";
+      document.getElementById("logo").style.fontSize = "50px";
     }
   }
   </script>

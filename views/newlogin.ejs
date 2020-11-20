@@ -7,15 +7,28 @@
     <title>Login</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/login.css">
-    <!-- <link rel="stylesheet" href="base.css"> -->
+     <link rel="stylesheet" href="/stylesheets/base.css"> 
     <!-- FONTS/ICONS -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
+<body style="border: 2px solid black;">
+    <div class="navbar">
+        <a href="/" class="logo">CollegeSpace</a>
+        <div class="navbar-right">
+            <a href="#contact-us">Contact Us</a>
+            <a href="#about-us">About Us</a>
+            <a href="/auth/login">Login</a>
+            <a href="/auth/registerStudent">Register As Student</a>
+            <a href="/auth/registerFaculty">Register As Faculty</a>
+        </div>
+    </div>
     <div class="main-content">
         <form action="/auth/login" method="POST">
             <div class="container" id="test">
