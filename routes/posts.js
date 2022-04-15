@@ -5,9 +5,9 @@ const { db } = require('../db')
 router.get('/:id', function(req, res) {
   //console.log(req.cookies.jwt)
   
-  if(!req.cookies.jwt) {
-    return res.redirect('/auth/login')
-  }
+  // if(!req.cookies.jwt) {
+  //   return res.redirect('/auth/login')
+  // }
   const {id} = req.params;
     db.query(`select * from posts join student on posts.sap_id = student.sap_id`, (err,result) => {
       if(err) {
